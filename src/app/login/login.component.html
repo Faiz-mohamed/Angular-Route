@@ -1,0 +1,12 @@
+<div class="auth-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onLogin()">
+  <input type="email" placeholder="Email" name="email" [(ngModel)]="email"/>
+  <input type="password" placeholder="Password" name="password" [(ngModel)]="password"/>
+  <button type="submit">Login</button>
+  </form>
+  <p class="link">Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+  <div *ngIf="errorMessage" style="color: red; margin-bottom: 10px;">
+  {{ errorMessage }}
+</div>
+</div>
